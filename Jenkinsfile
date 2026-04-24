@@ -26,7 +26,7 @@ spec:
   }
 
   environment {
-    REGISTRY = "registry.digitalocean.com"
+    REGISTRY = "registry.digitalocean.com/rib-producoes"
     IMAGE = "meu-app"
     TAG = "${env.BUILD_NUMBER}"
     FULL_IMAGE = "${REGISTRY}/${IMAGE}:${TAG}"
