@@ -47,7 +47,7 @@ spec:
       steps {
         container('docker') {
           git branch: 'main',
-              credentialsId: 'git-credentials',
+              credentialsId: '6e092ff7-a470-4788-883b-c9b645598604',
               url: 'https://github.com/marcosribeiro15/meu-app.git'
         }
       }
@@ -68,7 +68,7 @@ spec:
     stage('Push') {
       steps {
         container('docker') {
-          withCredentials([usernamePassword(credentialsId: 'registry-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+          withCredentials([usernamePassword(credentialsId: 'b3e7f14e-acc4-4c26-9b48-e132cd81281a', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
             sh """
               docker login ${REGISTRY} -u $USER -p $PASS
               docker push ${FULL_IMAGE}
