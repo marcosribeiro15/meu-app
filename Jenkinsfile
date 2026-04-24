@@ -46,7 +46,7 @@ spec:
     stage('Checkout') {
       steps {
         container('docker') {
-          git branch: 'master',
+          git branch: 'main',
               credentialsId: 'git-credentials',
               url: 'https://github.com/marcosribeiro15/meu-app.git'
         }
